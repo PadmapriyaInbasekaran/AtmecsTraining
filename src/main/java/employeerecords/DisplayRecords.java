@@ -6,7 +6,7 @@ import java.util.Map;
 public class DisplayRecords extends AddRecord{
 	public void dispRecords()
 	{
-		for (Map.Entry<Object, List<String>> me : m.entrySet()) { 
+		for (Map.Entry<String, List<String>> me : m.entrySet()) { 
 			System.out.print(me.getKey() + ":"); 
 			System.out.println(me.getValue());
 		}
