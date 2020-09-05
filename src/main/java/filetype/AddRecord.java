@@ -1,4 +1,4 @@
-package employeerecords;
+package filetype;
 
 public class AddRecord extends MainClass{
 

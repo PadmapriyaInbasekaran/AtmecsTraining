@@ -1,4 +1,4 @@
-package employeerecords;
+package filetype;
 
 
 import java.util.Map.Entry;
@@ -9,13 +9,13 @@ public class DisplayRecords extends AddRecord{
 	{  
 		Set<Entry<Integer, NewPojo>> st = m.entrySet();
 		for (Entry<Integer, NewPojo> me : st) { 
-				System.out.print(me.getKey() + ":"); 
+			System.out.print(me.getKey() + ":"); 
 			System.out.println(me.getValue());
-			      
-		          }
+
 		}
-			
 	}
+
+}
 
 
 
