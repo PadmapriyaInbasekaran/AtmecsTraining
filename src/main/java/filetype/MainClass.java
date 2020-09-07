@@ -76,7 +76,7 @@ public class MainClass {
 			{
 				NewPojo emp = new NewPojo(id, name, department, designation,salary);
 				ModifyRecord.modifyRecord(emp);
-			
+
 				break;
 			}
 			default:

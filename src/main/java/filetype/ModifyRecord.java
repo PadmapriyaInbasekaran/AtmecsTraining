@@ -6,13 +6,13 @@ public class ModifyRecord extends MainClass {
 		int id = sc.nextInt();
 		System.out.println("Enter the field you want to modify..");
 		field = sc.next();
-		
-		m.replace(id, emp);
+
+		m.put(id, emp);	
 		System.out.println("Enter the new field value..");
 		if(field.equals("name"))
 		{
-		name = sc.next();	 
-		emp.setName(name);
+			name = sc.next();	 
+			emp.setName(name);
 		}
 		else if(field.equals("department"))
 		{
@@ -33,6 +33,6 @@ public class ModifyRecord extends MainClass {
 		{
 			System.out.println("Invalid field");
 		}
-		
+
 	}
 }

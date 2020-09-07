@@ -9,7 +9,7 @@ public class ReadFile {
 	{
 		FileReader fr=new FileReader("D:\\testout.txt");    
 		int i;    
-		while((i=fr.read())!=-1)    
+		while((i = fr.read())!=-1)    
 		{
 			System.out.print((char)i);  
 		}
