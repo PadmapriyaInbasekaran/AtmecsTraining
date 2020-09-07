@@ -10,6 +10,7 @@ public class MainClass {
 	static String salary;
 	static Scanner sc;
 	static String option;
+	static String field ;
 	static Map<Integer, NewPojo> m;
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -18,7 +19,7 @@ public class MainClass {
 		m = new HashMap<Integer, NewPojo>(); 
 		do
 		{
-			System.out.println("Welcome!! Select the action you want to perform , \n1.Add a record \n2.Search a record with id \n3.Delete record with id \n4.Write to file \n5.Read a file \n6.Display all records");
+			System.out.println("Welcome!! Select the action you want to perform , \n1.Add a record \n2.Search a record with id \n3.Delete record with id \n4.Write to file \n5.Read a file \n6.Display all records \n7.Modify a record");
 			int input = sc.nextInt();
 			switch(input)
 			{
@@ -69,6 +70,13 @@ public class MainClass {
 			{
 				DisplayRecords d=new DisplayRecords();
 				d.dispRecords();
+				break;
+			}
+			case 7:
+			{
+				NewPojo emp = new NewPojo(id, name, department, designation,salary);
+				ModifyRecord.modifyRecord(emp);
+			
 				break;
 			}
 			default:
