@@ -3,7 +3,7 @@ package filetype;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -11,7 +11,7 @@ public class FileWrite extends AddRecord{
 	public void dispRecords() throws IOException
 	{  
 		FileWriter fw = null;
-		PrintWriter pw = null;
+		
 		try
 		{
 			Set<Entry<Integer, NewPojo>> st = m.entrySet();
@@ -19,8 +19,8 @@ public class FileWrite extends AddRecord{
 			{
 
 				fw = new FileWriter("D:\\testout.txt");  
-				pw = new PrintWriter(fw);
-				pw.write(me.getKey() +":" +me.getValue());    
+				
+				fw.write(me.getKey() +":" +me.getValue());    
 
 			}
 		}
