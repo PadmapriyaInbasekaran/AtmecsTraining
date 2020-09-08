@@ -1,37 +1,29 @@
 package filetype;
+import java.io.File;
 
-
-import java.io.FileWriter;
 import java.io.IOException;
-
-import java.util.Map.Entry;
-import java.util.Set;
+import java.io.PrintStream;
 
 public class FileWrite extends AddRecord{
+	PrintStream console;
 	public void dispRecords() throws IOException
 	{  
-		FileWriter fw = null;
 		
 		try
 		{
-			Set<Entry<Integer, NewPojo>> st = m.entrySet();
-			for (Entry<Integer, NewPojo> me : st) 
-			{
-
-				fw = new FileWriter("D:\\testout.txt");  
-				
-				fw.write(me.getKey() +":" +me.getValue());    
-
-			}
-		}
+   
+			File file=new File("D:\\records.txt");
+			PrintStream stream=new PrintStream(file);
+			console = System.out;
+			System.setOut(stream);
+			DisplayRecords.dispRecords();
+			System.setOut(console);
+	}
+		
 		catch(Exception e)
 		{
 			System.out.print(e);
 		}    
-		finally
-		{
-			fw.close(); 
-		}
 	}
 
 }

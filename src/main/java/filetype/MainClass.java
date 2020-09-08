@@ -68,8 +68,8 @@ public class MainClass {
 			}
 			case 6:
 			{
-				DisplayRecords d=new DisplayRecords();
-				d.dispRecords();
+				
+				DisplayRecords.dispRecords();
 				break;
 			}
 			case 7:

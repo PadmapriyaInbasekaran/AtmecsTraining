@@ -7,7 +7,7 @@ import java.io.IOException;
 public class ReadFile {
 	public void readFile() throws IOException
 	{
-		FileReader fr=new FileReader("D:\\testout.txt");    
+		FileReader fr=new FileReader("D:\\records.txt");    
 		int i;    
 		while((i = fr.read())!=-1)    
 		{

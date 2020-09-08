@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 public class DisplayRecords extends AddRecord{
-	public void dispRecords()
+	public static void dispRecords()
 	{  
 		Set<Entry<Integer, NewPojo>> st = m.entrySet();
 		for (Entry<Integer, NewPojo> me : st) { 
