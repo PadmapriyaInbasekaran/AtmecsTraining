@@ -19,7 +19,7 @@ public class MainClass {
 		m = new HashMap<Integer, NewPojo>(); 
 		do
 		{
-			System.out.println("Welcome!! Select the action you want to perform , \n1.Add a record \n2.Search a record with id \n3.Delete record with id \n4.Display all records");
+			System.out.println("Welcome!! Select the action you want to perform , \n1.Add a record \n2.Search a record with id \n3.Delete record with id \n4.Display all records \n5.Write to Database..");
 			int input = sc.nextInt();
 			switch(input)
 			{
@@ -58,7 +58,23 @@ public class MainClass {
 				d.dispRecords();
 				break;
 			}
-			
+			case 5:
+			{
+				System.out.println("Enter Id: ");
+				id = sc.nextInt();
+				System.out.println("Enter the Name: ");
+				name = sc.next();
+				System.out.println("Enter the Department: ");
+				department = sc.next();
+				System.out.println("Enter the Designation: ");
+				designation = sc.next();
+				System.out.println("Enter the Salary: ");
+				salary = sc.nextInt();
+				NewPojo emp = new NewPojo(id, name, department, designation,salary);
+				//WriteToDb w = new WriteToDb(id, name, department, designation, salary);
+				WriteToDb.writeToDb(emp);
+				break;
+			}
 			default:
 			{
 				System.out.println("Invalid selection ");
